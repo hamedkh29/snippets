@@ -21,22 +21,22 @@ Language Version: C# 3.0 or higher</Description>
 				<Literal>
 					<ID>privateName</ID>
 					<ToolTip>Property type</ToolTip>
-					<Default>int</Default>
+					<Default>privateName</Default>
 				</Literal>
-								<Literal>
+				<Literal>
 					<ID>publicName</ID>
 					<ToolTip>Property type</ToolTip>
-					<Default>int</Default>
+					<Default>publicName</Default>
 				</Literal>
 			</Declarations>
 			<Code Language="csharp"><![CDATA[
 			        private $type$ _$privateName$;
 
-        public $type% $publicName$
+        public $type$ $publicName$
         {
-            get { return $privateName$; }
+            get { return _$privateName$; }
             set {
-                $privateName$ = value;
+                _$privateName$ = value;
                 OnPropertyChanged("$publicName$");
             }
         }
