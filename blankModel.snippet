@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>blankmodel</Title>
+			<Shortcut>blankmodel</Shortcut>
+			<Description>Code snippet for an automatically implemented property
+Language Version: C# 3.0 or higher</Description>
+			<Author>Puriya az khobaye developera</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>path</ID>
+					<ToolTip>AngularPath</ToolTip>
+					<Default>baseInfo</Default>
+				</Literal>
+				<Literal>
+					<ID>caption</ID>
+					<ToolTip>CaptionModel</ToolTip>
+					<Default>نام_صفحه</Default>
+				</Literal>
+				<Literal>
+					<ID>icon</ID>
+					<ToolTip>IconClass</ToolTip>
+					<Default>fa-star</Default>
+				</Literal>
+				<Literal>
+					<ID>model</ID>
+					<ToolTip>ModelName</ToolTip>
+					<Default>BlankModel</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+			using System;
+			using System.Collections.Generic;
+			using System.ComponentModel;
+			using System.ComponentModel.DataAnnotations;
+			using System.Linq;
+			using System.Text;
+			using System.Threading.Tasks;
+			using HK.DomainLayer;
+			using HK.DomainLayer.Core;
+			using System.ComponentModel.DataAnnotations.Schema;
+			namespace MoshaveranSystemTreasury.DomainModel.BaseInfo
+			{
+			#region Config
+			/*
+						AngularPath($path$)
+						AngularTemplates(grid_typical,inup_typical)
+						AngularHeaderCaption($caption$)
+						AngularMenu(main:grid_typical,icon:fa $icon$)
+			*/
+			#endregion
+				public class $model$ : DomainEntityBase<long>
+				{
+					
+					#region Properties
+
+
+					#endregion
+					public override string EntityDescriptor()
+					{
+						throw new NotImplementedException();
+					}
+
+				}
+			}
+
+			$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

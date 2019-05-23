@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>unumber</Title>
+			<Shortcut>unumber</Shortcut>
+			<Description>HKPA Software Team</Description>
+			<Author>Puriya az khobaye developera</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>displayName</ID>
+					<ToolTip>DisplayName</ToolTip>
+					<Default>عنوان</Default>
+				</Literal>
+				<Literal>
+					<ID>priority</ID>
+					<ToolTip>Priority</ToolTip>
+					<Default>0</Default>
+				</Literal>
+				<Literal>
+					<ID>containerClass</ID>
+					<ToolTip>ContainerClass</ToolTip>
+					<Default>4</Default>
+				</Literal>
+				<Literal>
+					<ID>propType</ID>
+					<ToolTip>Type</ToolTip>
+					<Default>string</Default>
+				</Literal>
+				<Literal>
+					<ID>propName</ID>
+					<ToolTip>Name</ToolTip>
+					<Default>Title</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+			[DisplayName("$displayName$")]
+        [Required(ErrorMessage = "ورود $displayName$ الزامی است")]
+        //Priority($priority$)
+        //ColVisible(true)
+        //Visible(true)
+        //UiType(number)
+        //ContainerClass(col-md-$containerClass$)
+        public $propType$ $propName$ {get;protected set;}
+			$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

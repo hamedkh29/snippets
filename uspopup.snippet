@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>uspopup</Title>
+			<Shortcut>uspopup</Shortcut>
+			<Description>HKPA Software Team</Description>
+			<Author>Puriya az khobaye developera</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>displayName</ID>
+					<ToolTip>DisplayName</ToolTip>
+					<Default>انتخاب</Default>
+				</Literal>
+				<Literal>
+					<ID>priority</ID>
+					<ToolTip>Priority</ToolTip>
+					<Default>0</Default>
+				</Literal>
+				<Literal>
+					<ID>containerClass</ID>
+					<ToolTip>ContainerClass</ToolTip>
+					<Default>4</Default>
+				</Literal>
+				<Literal>
+					<ID>propType</ID>
+					<ToolTip>Type</ToolTip>
+					<Default>User</Default>
+				</Literal>
+				<Literal>
+					<ID>propName</ID>
+					<ToolTip>Name</ToolTip>
+					<Default>Title</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+			<![CDATA[
+		
+			[DisplayName("$displayName$")]
+			[ForeignKey("$propType$Id")]
+			//Priority($priority$)
+			//ColVisible(true)
+			//ColField($propName$)
+			//Visible(true)
+			//UiType(dropdown[Service=api/$propType$s/FindAll,Name=$propName$,Value=id])
+			//ContainerClass(col-md-$containerClass$)
+			public virtual $propType$ $propType$ {get;protected set;}
+				[Required(ErrorMessage = "انتخاب $displayName$ الزامی است")]
+				[DisplayName("$displayName$")]
+				//Priority($priority$)
+				public long $propType$Id {get;protected set;}
+			$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
